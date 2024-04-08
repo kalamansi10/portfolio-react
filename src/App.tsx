@@ -4,6 +4,7 @@ import Navigation from "./components/Navigation";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import ReachOut from "./pages/ReachOut";
+import "./App.css";
 
 const App: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/reach-out" element={<ReachOut />} />
-          <Route path='*' element={<Navigate to='/' replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </>
