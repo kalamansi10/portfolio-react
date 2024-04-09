@@ -1,6 +1,44 @@
+import useRandomizer from "../hooks/useRandomizer";
+
 const About: React.FC = () => {
+  const { getColor, getRandomTilt } = useRandomizer();
+
+  const frontEndTech: string[] = [
+    "HTML",
+    "CSS",
+    "Javascript",
+    "Typescript",
+    "React.js",
+  ];
+
+  const backEndTech: string[] = [
+    "Node.js",
+    "Ruby on Rails",
+    "MongoDB",
+    "PostgreSQL",
+  ];
+
+  const otherTech: string[] = ["GitHub", "Vite", "Adobe Tools"];
+
+  function renderList(list: string[]) {
+    return list.map((item) => {
+      return (
+        <li
+          key={item}
+          style={{
+            transform: getRandomTilt(),
+            display: "inline-block",
+            backgroundColor: getColor(),
+          }}
+        >
+          {item}
+        </li>
+      );
+    });
+  }
+
   return (
-    <div>
+    <div className="about-page">
       <h2>About</h2>
       <p>
         Hi, I'm Jaymar. I'm a self-taught, self-driven, full stack web
@@ -9,27 +47,18 @@ const About: React.FC = () => {
         can provide people with meaningful experiences.
       </p>
       <h2>Skills</h2>
-      <h3>Front End</h3>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>Typescript</li>
-        <li>React.js</li>
-      </ul>
-      <h3>Back End</h3>
-      <ul>
-        <li>Node.js</li>
-        <li>Ruby on Rails</li>
-        <li>MongoDB</li>
-        <li>PostgreSQL</li>
-      </ul>
-      <h3>Others</h3>
-      <ul>
-        <li>GitHub</li>
-        <li>Vite</li>
-        <li>Adobe Tools</li>
-      </ul>
+      <div className="skills-list">
+        <h3>Front End</h3>
+        <ul>{renderList(frontEndTech)}</ul>
+      </div>
+      <div className="skills-list">
+        <h3>Back End</h3>
+        <ul>{renderList(backEndTech)}</ul>
+      </div>
+      <div className="skills-list">
+        <h3>Others</h3>
+        <ul>{renderList(otherTech)}</ul>
+      </div>
     </div>
   );
 };

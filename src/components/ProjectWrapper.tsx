@@ -1,5 +1,6 @@
 import React from "react";
 import ImageSlider from "./ImageSlider";
+import useRandomizer from "../hooks/useRandomizer";
 
 interface Project {
   name: string;
@@ -15,9 +16,19 @@ interface ProjectWrapperProps {
 }
 
 const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
+  const { getColor, getRandomTilt } = useRandomizer();
+
   const mapTechStack = () => {
     return project.technologies.map((technology: string, index: number) => (
-      <li className="tech-item" key={index}>
+      <li
+        className="tech-item"
+        key={index}
+        style={{
+          transform: getRandomTilt(),
+          display: "inline-block",
+          backgroundColor: getColor(),
+        }}
+      >
         {technology}
       </li>
     ));
