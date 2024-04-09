@@ -1,3 +1,6 @@
+import React from "react";
+import ImageSlider from "./ImageSlider";
+
 interface Project {
   name: string;
   description: string;
@@ -14,22 +17,48 @@ interface ProjectWrapperProps {
 const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
   const mapTechStack = () => {
     return project.technologies.map((technology: string, index: number) => (
-      <li key={index}>{technology}</li>
+      <li className="tech-item" key={index}>
+        {technology}
+      </li>
     ));
   };
 
+  function renderLiveLink() {
+    if (project.live_preview_link.length) {
+      return (
+        <a href={project.live_preview_link}>
+          <button className="btn-1">Live Preview</button>
+        </a>
+      );
+    } else {
+      return (
+        <a href="#">
+          <button className="btn-3">No Preview</button>
+        </a>
+      );
+    }
+  }
+
   return (
-    <div>
-      <h3>{project.name}</h3>
-      <p>{project.description}</p>
-      <h4>Technologies</h4>
-      <ul>{mapTechStack()}</ul>
-      <a href={project.source_code_link}>
-        <button className="btn-2">Source Code</button>
-      </a>
-      <a href={project.live_preview_link}>
-        <button className="btn-1">Live Preview</button>
-      </a>
+    <div className="project-wrapper">
+      <section className="proj-preview">
+        <ImageSlider imageLinks={project.preview_images} />
+      </section>
+      <section className="proj-description">
+        <h3>{project.name}</h3>
+        <br />
+        <p>{project.description}</p>
+        <div className="proj-links">
+          <a href={project.source_code_link}>
+            <button className="btn-2">Source Code</button>
+          </a>
+          {renderLiveLink()}
+        </div>
+      </section>
+      <section className="proj-tech">
+        <h4>Technologies</h4>
+        <ul className="tech-list">{mapTechStack()}</ul>
+      </section>
     </div>
   );
 };

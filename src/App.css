@@ -1,11 +1,14 @@
 /* Navigation */
 
 nav {
+  z-index: 100;
   padding: 0;
   height: 4rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--background);
   transition: color ease-out 0.5s;
 }
 
@@ -133,13 +136,126 @@ nav {
 
 /* Buttons */
 .btn-1 {
-  background-color: var(--primary);
+  background-color: var(--background);
   border: 1px solid var(--primary);
-  color: var(--background);
+  color: var(--primary);
 }
 
 .btn-2 {
   background-color: var(--secondary);
   border: 1px solid var(--secondary);
   color: var(--text);
+}
+
+.btn-1,
+.btn-2 {
+  transition: filter ease-in .2s;
+  &:hover {
+    filter: invert();
+    cursor: pointer;
+  }
+}
+
+.btn-3 {
+  background-color: var(--background);
+  border: 1px solid var(--text);
+  color: var(--text);
+}
+
+/* Project Wrapper */
+
+.project-wrapper {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid var(--text);
+  border-top: none;
+}
+
+.proj-preview {
+  grid-column: auto / span 1;
+}
+
+.proj-description {
+  grid-column: auto / span 1;
+}
+
+.proj-links {
+  padding-top: 1rem;
+
+  a {
+    padding-right: .5rem;
+  }
+}
+
+.proj-tech {
+  width: 100%;
+  grid-column: auto / span 2;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-item {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  color: var(--background);
+  text-wrap: nowrap;
+}
+
+@media (max-width: 720px) {
+  .project-wrapper {
+    grid-template-columns: 1fr;
+  }  
+
+  .proj-tech {
+    grid-column: auto / span 1;
+  }  
+}
+
+/* Project Image Slider */
+
+.preview-slider {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+
+  span {
+    position: absolute;
+    bottom: 40%;
+    font-size: 2rem;
+    opacity: 30%;
+    background-color: var(--background);
+  }
+
+  span:hover {
+    cursor: pointer;
+    opacity: 70%;
+  }
+}
+
+.images-container {
+  display: flex;
+  align-items: center;
+  transition: transform .2s cubic-bezier(.06,.23,.55,.8);
+}
+
+.right-slider {
+  right: 0;
+}
+
+.preview-img {
+  width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
