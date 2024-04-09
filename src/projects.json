@@ -1,0 +1,31 @@
+[
+  {
+    "name": "Chess Game",
+    "description": "This chess game was created using Ruby as part of The Odin Project curriculum. It showcases an object-oriented design for every aspect of the program, including rules implementation, display, and game pieces. The game features per-piece valid move detection and checkmate detection. To play the game, simply run the main game file in the terminal.",
+    "technologies": [
+      "Ruby"
+    ],
+    "source_code_link": "https://github.com/kalamansi10/chess-odin-project",
+    "live_preview_link": "https://replit.com/@kalamansi10/chess-odin-project",
+    "preview_images": ["chess-1.webp", "chess-2.webp", "chess-3.webp", "chess-4.webp"]
+  },
+  {
+    "name": "Seed Mart",
+    "description": "Seed Mart is an e-commerce website template that utilizes React.js for its front-end. It provides two back-end versions—one built with Ruby on Rails and the other with Node.js. The current website features user authentication, dynamic item search, an item cart, and basic checkout functionality. The plan is to create additional versions of both the front-end and back-end using different frameworks and languages while ensuring seamless compatibility between them.",
+    "technologies": [
+      "React.js",
+      "Vite",
+      "react-router-dom",
+      "Ruby on Rails",
+      "PostgreSQL",
+      "Devise",
+      "Node.js",
+      "MongoDB",
+      "Mongoose",
+      "Passport.js"
+    ],
+    "source_code_link": "https://github.com/kalamansi10/seed-mart-front-reactjs",
+    "live_preview_link": "",
+    "preview_images": ["seed-mart-1.webp", "seed-mart-2.webp", "seed-mart-3.webp", "seed-mart-4.webp", "seed-mart-5.webp"]
+  }
+]
