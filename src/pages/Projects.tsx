@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="project-page">
       <h2>Projects</h2>
       {renderProjects()}
     </div>

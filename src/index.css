@@ -164,23 +164,7 @@ button {
 li {
   list-style-type: none;
 }
-
-/* Margin */
-body {
-  margin-left: 15vw;
-  margin-right: 15vw;
-}
-
-@media (max-width: 1080px) {
-  body {
-    margin-left: 10vw;
-    margin-right: 10vw;
-  }
-}
-
-@media (max-width: 720px) {
-  body {
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-}
+/* 
+* {
+  outline: 1px solid red;
+} */

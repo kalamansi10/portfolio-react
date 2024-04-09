@@ -11,6 +11,7 @@ const App: React.FC = () => {
     <>
       <BrowserRouter>
         <Navigation />
+        <div className="pages">
         <Routes>
           <Route index element={<Hero />} />
           <Route path="/about" element={<About />} />
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Route path="/reach-out" element={<ReachOut />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
+        </div>
       </BrowserRouter>
     </>
   );

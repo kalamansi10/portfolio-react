@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navigation: React.FC = () => {
   return (
-    <nav>
+    <nav className="nav-bar">
       <Link to="/">
         <h1 className="nav-header">Jaymar Jumadiao</h1>
       </Link>

@@ -1,9 +1,5 @@
 const Hero: React.FC = () => {
-  return (
-    <div>
-      <p>Hero</p>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Hero;

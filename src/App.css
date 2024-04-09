@@ -1,8 +1,36 @@
+.pages {
+  margin-left: 15vw;
+  margin-right: 15vw;
+
+  h2 {
+    text-align: center;
+    padding: 4rem;
+  }
+}
+
+.pages {
+  padding-top: 4rem;
+}
+
+@media (max-width: 1080px) {
+  .pages {
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .pages {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
 /* Navigation */
 
 nav {
+  position: fixed;
   z-index: 100;
-  padding: 0;
   height: 4rem;
   width: 100%;
   display: flex;
@@ -28,9 +56,9 @@ nav {
 .nav-links {
   margin: 0;
   padding: 0;
-  width: 300px;
+  width: 275px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-end;
 }
 
@@ -86,19 +114,16 @@ nav {
       transform: rotate(-45deg);
       transform-origin: center;
       top: 50%;
-      border-color: var(--background);
     }
 
     &:before {
       transform: rotate(45deg);
       transform-origin: center;
       top: 50%;
-      border-color: var(--background);
     }
 
     i {
       opacity: 0;
-      background-color: var(--background);
     }
   }
 
@@ -113,9 +138,7 @@ nav {
     right: 0;
     text-wrap: nowrap;
     background-color: var(--background);
-    transition:
-      background-color ease-out 0.5s,
-      color ease-out 0.5s,
+    transition: background-color ease-out 0.5s, color ease-out 0.5s,
       height linear 0.07s;
 
     li {
@@ -125,12 +148,27 @@ nav {
 
   #nav-toggle:checked ~ .nav-links {
     height: 50vh;
-    color: var(--background);
-    background-color: var(--primary);
+    background-color: var(--background);
+    border-bottom: 2px solid var(--text);
   }
+}
 
-  nav:has(#nav-toggle:checked) {
-    color: var(--background);
+.nav-bar {
+  padding-left: 15vw;
+  padding-right: 15vw;
+}
+
+@media (max-width: 1080px) {
+  .nav-bar {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-bar {
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 }
 
@@ -149,7 +187,7 @@ nav {
 
 .btn-1,
 .btn-2 {
-  transition: filter ease-in .2s;
+  transition: filter ease-in 0.2s;
   &:hover {
     filter: invert();
     cursor: pointer;
@@ -163,6 +201,10 @@ nav {
 }
 
 /* Project Wrapper */
+
+.project-page > :nth-child(2) {
+  border-top: 1px solid var(--text);
+}
 
 .project-wrapper {
   padding: 1rem;
@@ -187,7 +229,7 @@ nav {
   padding-top: 1rem;
 
   a {
-    padding-right: .5rem;
+    padding-right: 0.5rem;
   }
 }
 
@@ -206,8 +248,8 @@ nav {
 }
 
 .tech-item {
+  padding: 1px;
   background-color: var(--primary);
-  border: 1px solid var(--primary);
   color: var(--background);
   text-wrap: nowrap;
 }
@@ -215,11 +257,12 @@ nav {
 @media (max-width: 720px) {
   .project-wrapper {
     grid-template-columns: 1fr;
-  }  
+  }
 
   .proj-tech {
     grid-column: auto / span 1;
-  }  
+    flex-wrap: wrap;
+  }
 }
 
 /* Project Image Slider */
@@ -247,7 +290,7 @@ nav {
 .images-container {
   display: flex;
   align-items: center;
-  transition: transform .2s cubic-bezier(.06,.23,.55,.8);
+  transition: transform 0.2s cubic-bezier(0.06, 0.23, 0.55, 0.8);
 }
 
 .right-slider {
@@ -258,4 +301,96 @@ nav {
   width: 300px;
   aspect-ratio: 1 / 1;
   object-fit: contain;
+}
+
+/* About */
+
+.about-page {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  ul > li {
+    padding: 1px;
+    color: var(--background);
+    text-wrap: nowrap;
+  }
+}
+
+/* Contact */
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--text);
+  padding: 3rem;
+  text-decoration: none;
+  color: currentColor;
+  position: relative;
+  margin: 100px auto 0;
+  background-color: var(--background);
+
+  img {
+    width: 100px;
+    aspect-ratio: 1 / 1;
+    filter: invert();
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: rgba(255, 255, 255, 0);
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      background: linear-gradient(
+        45deg,
+        #fb0094,
+        #0000ff,
+        #00ff00,
+        #ffff00,
+        #ff0000,
+        #fb0094,
+        #0000ff,
+        #00ff00,
+        #ffff00,
+        #ff0000
+      );
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -1;
+      animation: steam 20s linear infinite;
+    }
+
+    &:after {
+      filter: blur(50px);
+    }
+  }
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .contact-info {
+    img {
+      filter: none;
+    }
+  }
 }
