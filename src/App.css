@@ -30,9 +30,9 @@
 
 nav {
   position: fixed;
-  z-index: 100;
+  z-index: 50;
   height: 4rem;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,7 @@ nav {
   font-size: 1.25rem; /* 20px */
   text-wrap: nowrap;
   position: relative;
-  z-index: 100;
+  z-index: 50;
 }
 
 #nav-toggle,
@@ -65,7 +65,7 @@ nav {
 @media (max-width: 720px) {
   .burger-wrapper {
     display: inline-block;
-    z-index: 100;
+    z-index: 50;
   }
 
   .burger {
@@ -175,32 +175,36 @@ nav {
 /* Buttons */
 .btn-1 {
   background-color: var(--background);
-  border: 1px solid var(--primary);
-  color: var(--primary);
+  border: 1px solid var(--text);
+  color: var(--text);
 }
 
 .btn-2 {
-  background-color: var(--secondary);
-  border: 1px solid var(--secondary);
-  color: var(--text);
+  background-color: var(--text);
+  border: 1px solid var(--text);
+  color: var(--background);
 }
 
 .btn-1,
 .btn-2 {
-  transition: filter ease-in 0.2s;
   &:hover {
-    filter: invert();
     cursor: pointer;
+    opacity: 50%;
   }
 }
 
 .btn-3 {
   background-color: var(--background);
-  border: 1px solid var(--text);
+  border: 1px dashed var(--text);
   color: var(--text);
+  opacity: 50%;
 }
 
 /* Project Wrapper */
+
+.project-page {
+  margin-bottom: 10rem;
+}
 
 .project-page > :nth-child(2) {
   border-top: 1px solid var(--text);
@@ -215,6 +219,7 @@ nav {
   align-items: center;
   border: 1px solid var(--text);
   border-top: none;
+  background-color: var(--background);
 }
 
 .proj-preview {
@@ -306,6 +311,9 @@ nav {
 /* About */
 
 .about-page {
+  height: 100vh;
+  margin-bottom: 10rem;
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -321,23 +329,29 @@ nav {
 
 /* Contact */
 
+.contact-page{
+  margin-bottom: 10rem;
+}
+
 .contact-info {
   display: flex;
+  gap: 3rem;
   align-items: center;
-  gap: 1rem;
   border: 1px solid var(--text);
   padding: 3rem;
   text-decoration: none;
   color: currentColor;
-  position: relative;
   margin: 100px auto 0;
-  background-color: var(--background);
 
   img {
     width: 100px;
     aspect-ratio: 1 / 1;
     filter: invert();
   }
+}
+
+.steam-anim {
+  position: relative;
 
   &:hover {
     cursor: pointer;
@@ -393,4 +407,29 @@ nav {
       filter: none;
     }
   }
+}
+
+@keyframes move {
+  100% {
+      transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+/* List Animations */
+
+.up-anim {
+  animation: up-anim 0.9s cubic-bezier(.81,-0.88,.22,1.84);
+}
+
+@keyframes up-anim {
+  0% {
+    transform: translate(0, 50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.hero-page {
+  overflow: hidden;
 }
