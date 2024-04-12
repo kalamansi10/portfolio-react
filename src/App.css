@@ -204,6 +204,7 @@ nav {
 
 .project-page {
   margin-bottom: 10rem;
+  animation: fade-in 1s cubic-bezier(.05,.45,.67,1);
 }
 
 .project-page > :nth-child(2) {
@@ -313,6 +314,7 @@ nav {
 .about-page {
   height: 100vh;
   margin-bottom: 10rem;
+  animation: fade-in 1s cubic-bezier(.05,.45,.67,1);
 
   ul {
     display: flex;
@@ -329,12 +331,14 @@ nav {
 
 /* Contact */
 
-.contact-page{
+.contact-page {
   margin-bottom: 10rem;
+  animation: fade-in 1s cubic-bezier(.05,.45,.67,1);
 }
 
 .contact-info {
   display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
   align-items: center;
   border: 1px solid var(--text);
@@ -352,6 +356,7 @@ nav {
 
 .steam-anim {
   position: relative;
+  background-color: var(--background);
 
   &:hover {
     cursor: pointer;
@@ -363,19 +368,7 @@ nav {
       position: absolute;
       left: -2px;
       top: -2px;
-      background: linear-gradient(
-        45deg,
-        #fb0094,
-        #0000ff,
-        #00ff00,
-        #ffff00,
-        #ff0000,
-        #fb0094,
-        #0000ff,
-        #00ff00,
-        #ffff00,
-        #ff0000
-      );
+      background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
       background-size: 400%;
       width: calc(100% + 4px);
       height: calc(100% + 4px);
@@ -411,14 +404,14 @@ nav {
 
 @keyframes move {
   100% {
-      transform: translate3d(0, 0, 1px) rotate(360deg);
+    transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
 
 /* List Animations */
 
 .up-anim {
-  animation: up-anim 0.9s cubic-bezier(.81,-0.88,.22,1.84);
+  animation: up-anim 0.9s cubic-bezier(0.81, -0.88, 0.22, 1.84);
 }
 
 @keyframes up-anim {
@@ -430,6 +423,39 @@ nav {
   }
 }
 
+/* Hero */
+
 .hero-page {
-  overflow: hidden;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite, fade-in 1s cubic-bezier(.05,.45,.67,1);
+  height: 85vh;
+  padding: 20px;
+
+  p {
+    color: var(--background);
+    font-size: 5vmax;
+  }
 }
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
