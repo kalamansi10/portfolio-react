@@ -139,18 +139,12 @@ small {
   :root {
     --text: #1e140b;
     --background: #faf4f0;
-    --primary: #ff7b00;
-    --secondary: #dba97b;
-    --accent: #c37832;
   }
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #f4eae1;
     --background: #0f0905;
-    --primary: #ff7b00;
-    --secondary: #845324;
-    --accent: #cd823c;
   }
 }
 
