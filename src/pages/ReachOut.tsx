@@ -23,7 +23,7 @@ const ReachOut: React.FC = () => {
     <div className="contact-page">
       <h2>Reach Out To Me</h2>
       <a className="contact-info anim-list-item" href="mailto: jjum1337@outlook.com" >
-        <img src="./public/assets/envelope-icon.svg" alt="Email" />
+        <img src="/public/assets/envelope-icon.svg" alt="Email" />
         <div>
           <h3>Email</h3>
           <br />
@@ -31,7 +31,7 @@ const ReachOut: React.FC = () => {
         </div>
       </a>
       <a className="contact-info anim-list-item" href="https://github.com/kalamansi10">
-        <img src="./public/assets/github-icon.svg" alt="GitHub" />
+        <img src="/public/assets/github-icon.svg" alt="GitHub" />
         <div>
           <h3>GitHub</h3>
           <br />
@@ -39,7 +39,7 @@ const ReachOut: React.FC = () => {
         </div>
       </a>
       <a className="contact-info anim-list-item" href="https://www.linkedin.com/in/jjumadiao">
-        <img src="./public/assets/linkedin-square-icon.svg" alt="LinkedIn" />
+        <img src="/public/assets/linkedin-square-icon.svg" alt="LinkedIn" />
         <div>
           <h3>LinkedIn</h3>
           <br />
