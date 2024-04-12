@@ -5,7 +5,7 @@ interface ImageSliderProps {
 }
 
 const ImageSlider: React.FC<ImageSliderProps> = ({ imageLinks }) => {
-  const assetsPath: string = "/public/assets/";
+  const assetsPath: string = "/assets/";
   const images = useRef<HTMLDivElement | null>(null);
   const sliderPos = useRef<number>(0);
 
