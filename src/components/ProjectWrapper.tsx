@@ -1,6 +1,6 @@
-import React from "react";
 import ImageSlider from "./ImageSlider";
 import useRandomizer from "../hooks/useRandomizer";
+import useListAnimation from "../hooks/useListAnimation";
 
 interface Project {
   name: string;
@@ -18,10 +18,12 @@ interface ProjectWrapperProps {
 const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
   const { getColor, getRandomTilt } = useRandomizer();
 
-  const mapTechStack = () => {
+  useListAnimation();
+
+  function mapTechStack() {
     return project.technologies.map((technology: string, index: number) => (
       <li
-        className="tech-item"
+        className="tech-item anim-list-item"
         key={index}
         style={{
           transform: getRandomTilt(),
@@ -32,7 +34,7 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
         {technology}
       </li>
     ));
-  };
+  }
 
   function renderLiveLink() {
     if (project.live_preview_link.length) {

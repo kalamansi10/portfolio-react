@@ -1,8 +1,8 @@
 import useRandomizer from "../hooks/useRandomizer";
+import useListAnimation from "../hooks/useListAnimation";
 
 const About: React.FC = () => {
   const { getColor, getRandomTilt } = useRandomizer();
-
   const frontEndTech: string[] = [
     "HTML",
     "CSS",
@@ -17,13 +17,15 @@ const About: React.FC = () => {
     "MongoDB",
     "PostgreSQL",
   ];
-
   const otherTech: string[] = ["GitHub", "Vite", "Adobe Tools"];
+
+  useListAnimation()
 
   function renderList(list: string[]) {
     return list.map((item) => {
       return (
         <li
+          className="anim-list-item"
           key={item}
           style={{
             transform: getRandomTilt(),

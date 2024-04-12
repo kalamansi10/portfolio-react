@@ -1,8 +1,12 @@
+import useListAnimation from "../hooks/useListAnimation";
+
 const ReachOut: React.FC = () => {
+  useListAnimation()
+
   return (
     <div className="contact-page">
       <h2>Reach Out To Me</h2>
-      <a className="contact-info" href="mailto: jjum1337@outlook.com" >
+      <a className="contact-info steam-anim anim-list-item" href="mailto: jjum1337@outlook.com" >
         <img src="./src/assets/envelope-icon.svg" alt="Email" />
         <div>
           <h3>Email</h3>
@@ -10,7 +14,7 @@ const ReachOut: React.FC = () => {
           <p>jjum1337@outlook.com</p>
         </div>
       </a>
-      <a className="contact-info" href="https://github.com/kalamansi10">
+      <a className="contact-info steam-anim anim-list-item" href="https://github.com/kalamansi10">
         <img src="./src/assets/github-icon.svg" alt="GitHub" />
         <div>
           <h3>GitHub</h3>
@@ -18,7 +22,7 @@ const ReachOut: React.FC = () => {
           <p>GitHub</p>
         </div>
       </a>
-      <a className="contact-info" href="https://www.linkedin.com/in/jjumadiao">
+      <a className="contact-info steam-anim anim-list-item" href="https://www.linkedin.com/in/jjumadiao">
         <img src="./src/assets/linkedin-square-icon.svg" alt="LinkedIn" />
         <div>
           <h3>LinkedIn</h3>
