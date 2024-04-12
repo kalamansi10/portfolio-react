@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
 
 const Navigation: React.FC = () => {
+  function closeNavAndScrollTop() {
+    const navToggle: HTMLElement | null = document.getElementById("nav-toggle");
+    if (navToggle instanceof HTMLInputElement) {
+      navToggle.checked = false;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
   return (
     <nav className="nav-bar">
       <Link to="/">
@@ -15,13 +23,13 @@ const Navigation: React.FC = () => {
         </label>
       </div>
       <ul className="nav-links">
-        <li>
+        <li onClick={closeNavAndScrollTop}>
           <Link to="/about">About</Link>
         </li>
-        <li>
+        <li onClick={closeNavAndScrollTop}>
           <Link to="/projects">Projects</Link>
         </li>
-        <li>
+        <li onClick={closeNavAndScrollTop}>
           <Link to="/reach-out">Reach Out</Link>
         </li>
       </ul>
