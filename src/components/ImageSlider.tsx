@@ -15,6 +15,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ imageLinks }) => {
           className="preview-img"
           src={assetsPath + link}
           alt={link.split("/").pop()}
+          key={link}
         />
     ));
   }
