@@ -200,6 +200,12 @@ nav {
   opacity: 50%;
 }
 
+.btn-1,
+.btn-2,
+.btn-3 {
+  padding: 10px;
+}
+
 /* Project Wrapper */
 
 .project-page {
@@ -285,6 +291,10 @@ nav {
     font-size: 2rem;
     opacity: 30%;
     background-color: var(--background);
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none; 
   }
 
   span:hover {
