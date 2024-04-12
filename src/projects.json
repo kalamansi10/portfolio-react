@@ -1,7 +1,7 @@
 [
   {
     "name": "Seed Mart",
-    "description": "Seed Mart is an e-commerce website template that utilizes React.js for its front-end. It provides two back-end versions—one built with Ruby on Rails and the other with Node.js. The current website features user authentication, dynamic item search, an item cart, and basic checkout functionality. The plan is to create additional versions of both the front-end and back-end using different frameworks and languages while ensuring seamless compatibility between them.",
+    "description": "Seed Mart is an e-commerce website template that utilizes React.js for its front-end. It provides two back-end versions—one built with Ruby on Rails and the other with Node.js. The current website features user authentication, dynamic item search, an item cart, and basic checkout functionality. My goal is to create additional versions of both the front-end and back-end using different frameworks and languages while ensuring seamless compatibility between them.",
     "technologies": [
       "React.js",
       "Vite",
