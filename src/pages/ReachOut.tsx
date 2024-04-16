@@ -17,12 +17,22 @@ const ReachOut: React.FC = () => {
     };
   }, [])
 
+  function openLinkInNewTab(
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ): void {
+    e.preventDefault();
+    const target = e.target as HTMLAnchorElement;
+    if (target.href) {
+      window.open(target.href, "_blank", "noopener,noreferrer");
+    }
+  }
+
   useListAnimation()
 
   return (
     <div className="contact-page">
       <h2>Reach Out To Me</h2>
-      <a className="contact-info anim-list-item" href="mailto: jjum1337@outlook.com" >
+      <a className="contact-info anim-list-item" href="mailto: jjum1337@outlook.com" onClick={openLinkInNewTab}>
         <img src="/assets/envelope-icon.svg" alt="Email" />
         <div>
           <h3>Email</h3>
@@ -30,7 +40,7 @@ const ReachOut: React.FC = () => {
           <p>jjum1337@outlook.com</p>
         </div>
       </a>
-      <a className="contact-info anim-list-item" href="https://github.com/kalamansi10">
+      <a className="contact-info anim-list-item" href="https://github.com/kalamansi10" onClick={openLinkInNewTab}>
         <img src="/assets/github-icon.svg" alt="GitHub" />
         <div>
           <h3>GitHub</h3>
@@ -38,7 +48,7 @@ const ReachOut: React.FC = () => {
           <p>GitHub</p>
         </div>
       </a>
-      <a className="contact-info anim-list-item" href="https://www.linkedin.com/in/jjumadiao">
+      <a className="contact-info anim-list-item" href="https://www.linkedin.com/in/jjumadiao" onClick={openLinkInNewTab}>
         <img src="/assets/linkedin-square-icon.svg" alt="LinkedIn" />
         <div>
           <h3>LinkedIn</h3>

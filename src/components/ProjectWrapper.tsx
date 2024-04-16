@@ -40,7 +40,13 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
     if (project.live_preview_link.length) {
       return (
         <a href={project.live_preview_link}>
-          <button className="btn-1">Live Preview</button>
+          <button
+            className="btn-1"
+            onClick={openLinkInNewTab}
+            value={project.live_preview_link}
+          >
+            Live Preview
+          </button>
         </a>
       );
     } else {
@@ -49,6 +55,16 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
           <button className="btn-3">No Preview</button>
         </a>
       );
+    }
+  }
+
+  function openLinkInNewTab(
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ): void {
+    e.preventDefault();
+    const target = e.target as HTMLButtonElement;
+    if (target.value) {
+      window.open(target.value, "_blank", "noopener,noreferrer");
     }
   }
 
@@ -63,7 +79,13 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
         <p>{project.description}</p>
         <div className="proj-links">
           <a href={project.source_code_link}>
-            <button className="btn-2">Source Code</button>
+            <button
+              className="btn-2"
+              onClick={openLinkInNewTab}
+              value={project.source_code_link}
+            >
+              Source Code
+            </button>
           </a>
           {renderLiveLink()}
         </div>
