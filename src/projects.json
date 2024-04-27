@@ -15,8 +15,14 @@
       "Passport.js"
     ],
     "source_code_link": "https://github.com/kalamansi10/seed-mart-front-reactjs",
-    "live_preview_link": "",
-    "preview_images": ["seed-mart-1.webp", "seed-mart-2.webp", "seed-mart-3.webp", "seed-mart-4.webp", "seed-mart-5.webp"]
+    "live_preview_link": "https://seedmart.biz/",
+    "preview_images": [
+      "seed-mart-1.webp",
+      "seed-mart-2.webp",
+      "seed-mart-3.webp",
+      "seed-mart-4.webp",
+      "seed-mart-5.webp"
+    ]
   },
   {
     "name": "Chess Game",
@@ -26,6 +32,11 @@
     ],
     "source_code_link": "https://github.com/kalamansi10/chess-odin-project",
     "live_preview_link": "https://replit.com/@kalamansi10/chess-odin-project",
-    "preview_images": ["chess-1.webp", "chess-2.webp", "chess-3.webp", "chess-4.webp"]
+    "preview_images": [
+      "chess-1.webp",
+      "chess-2.webp",
+      "chess-3.webp",
+      "chess-4.webp"
+    ]
   }
 ]
