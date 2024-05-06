@@ -43,7 +43,7 @@ const About: React.FC = () => {
     <div className="about-page">
       <h2>About</h2>
       <p>
-        Hi, I'm Jaymar. I'm a self-taught, self-driven, full stack web
+        Hello. I'm Jaymar. I'm a self-taught and self-driven full stack web
         developer. I have been doing web development for over a year now, and I
         am eager to contribute my skills to help industries build products that
         can provide people with meaningful experiences.
