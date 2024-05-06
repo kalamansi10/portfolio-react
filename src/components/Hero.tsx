@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         Developer
       </h2>
       <br />
-      <p style={{ fontSize: "2vmax" }}>
+      <p style={{ color: "var(--background)", fontSize: "2vmax" }}>
         Hi, let me help you with your project.
       </p>
       <br />
