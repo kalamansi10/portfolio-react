@@ -11,12 +11,13 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ imageLinks }) => {
 
   function renderPreview() {
     return imageLinks.map((link: string) => (
-        <img
-          className="preview-img"
-          src={assetsPath + link}
-          alt={link.split("/").pop()}
-          key={link}
-        />
+      <img
+        className="preview-img"
+        src={assetsPath + link}
+        alt={link.split("/").pop()}
+        key={link}
+        loading="lazy"
+      />
     ));
   }
 
