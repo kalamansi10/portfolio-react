@@ -129,6 +129,50 @@ h5 {
   font-size: 1.25rem; /* 20px */
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* Adjust as needed */
+  }
+
+  h2 {
+    font-size: 2rem; /* Adjust as needed */
+  }
+
+  h3 {
+    font-size: 1.6rem; /* Adjust as needed */
+  }
+
+  h4 {
+    font-size: 1.25rem; /* Adjust as needed */
+  }
+
+  h5 {
+    font-size: 1rem; /* Adjust as needed */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem; /* Adjust as needed */
+  }
+
+  h2 {
+    font-size: 1.6rem; /* Adjust as needed */
+  }
+
+  h3 {
+    font-size: 1.25rem; /* Adjust as needed */
+  }
+
+  h4 {
+    font-size: 1rem; /* Adjust as needed */
+  }
+
+  h5 {
+    font-size: 0.8rem; /* Adjust as needed */
+  }
+}
+
 small {
   font-size: 0.8rem; /* 12.8px */
 }
