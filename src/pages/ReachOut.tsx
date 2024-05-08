@@ -31,7 +31,7 @@ const ReachOut: React.FC = () => {
 
   return (
     <div className="contact-page">
-      <h2>Reach Out To Me</h2>
+      <h1>Reach Out To Me</h1>
       <a
         className="contact-info anim-list-item"
         href="mailto: jjum1337@outlook.com"
@@ -39,7 +39,7 @@ const ReachOut: React.FC = () => {
       >
         <img src="/assets/envelope-icon.svg" alt="Email" loading="lazy" />
         <div>
-          <h3>Email</h3>
+          <h2>Email</h2>
           <br />
           <p>jjum1337@outlook.com</p>
         </div>
@@ -51,9 +51,9 @@ const ReachOut: React.FC = () => {
       >
         <img src="/assets/github-icon.svg" alt="GitHub" loading="lazy" />
         <div>
-          <h3>GitHub</h3>
+          <h2>GitHub</h2>
           <br />
-          <p>GitHub</p>
+          <p>@kalamansi10</p>
         </div>
       </a>
       <a
@@ -67,9 +67,9 @@ const ReachOut: React.FC = () => {
           loading="lazy"
         />
         <div>
-          <h3>LinkedIn</h3>
+          <h2>LinkedIn</h2>
           <br />
-          <p>LinkedIn</p>
+          <p>@jjumadiao</p>
         </div>
       </a>
     </div>

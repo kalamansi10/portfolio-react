@@ -74,7 +74,7 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
         <ImageSlider imageLinks={project.preview_images} />
       </section>
       <section className="proj-description">
-        <h3>{project.name}</h3>
+        <h2>{project.name}</h2>
         <br />
         <p>{project.description}</p>
         <div className="proj-links">
@@ -91,7 +91,7 @@ const ProjectWrapper: React.FC<ProjectWrapperProps> = ({ project }) => {
         </div>
       </section>
       <section className="proj-tech">
-        <h4>Technologies</h4>
+        <h3>Tech Used:</h3>
         <ul className="tech-list">{mapTechStack()}</ul>
       </section>
     </div>

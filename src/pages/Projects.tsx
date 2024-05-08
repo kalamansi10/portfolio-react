@@ -19,7 +19,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="project-page">
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       {renderProjects()}
     </div>
   );

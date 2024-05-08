@@ -2,9 +2,9 @@
   margin-left: 15vw;
   margin-right: 15vw;
 
-  h1, h2 {
+  h1 {
     text-align: center;
-    padding: 4rem;
+    padding: 5rem 0;
   }
 }
 
@@ -212,6 +212,10 @@ nav {
 .project-page {
   margin-bottom: 10rem;
   animation: fade-in 1s cubic-bezier(0.05, 0.45, 0.67, 1);
+
+  h2 {
+    padding-top: 2rem;
+  }
 }
 
 .project-page > :nth-child(2) {
@@ -252,6 +256,11 @@ nav {
   justify-self: start;
   display: flex;
   align-items: center;
+
+  h3 {
+    padding: 10px;
+    text-wrap: nowrap;
+  }
 }
 
 .tech-list {
@@ -327,6 +336,10 @@ nav {
   margin-bottom: 10rem;
   animation: fade-in 1s cubic-bezier(0.05, 0.45, 0.67, 1);
 
+  h2 {
+    padding: 4rem 0;
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -361,6 +374,11 @@ nav {
     width: 100px;
     aspect-ratio: 1 / 1;
     filter: invert();
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
   }
 }
 

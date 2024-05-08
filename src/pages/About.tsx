@@ -41,7 +41,7 @@ const About: React.FC = () => {
 
   return (
     <div className="about-page">
-      <h2>About</h2>
+      <h1>About</h1>
       <p>
         Hello. I'm Jaymar. I'm a self-taught and self-driven full stack web
         developer. I have been doing web development for over a year now, and I

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Hero: React.FC = () => {
   return (
     <div className="hero-page fade-in">
-      <h2
+      <h1
         style={{
           color: "var(--background)",
           padding: "0",
@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
         Full Stack <br />
         Web <br />
         Developer
-      </h2>
+      </h1>
       <br />
       <p style={{ color: "var(--background)", fontSize: "2vmax" }}>
         Hi, let me help you with your project.
